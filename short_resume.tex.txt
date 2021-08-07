@@ -1,0 +1,213 @@
+\documentclass[12pt,a4paper,roman]{moderncv}        
+% possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{black}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome}
+\usepackage{fontspec}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+% if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.85]{geometry}
+\usepackage{multicol}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+
+% personal data
+\name{Pritam}{Ghosh}
+% \title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+% \address{500 College Ave, Swarthmore, PA 19081 }{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+% \phone[mobile]{909-839-3097}                   % optional, remove / comment the line if not wanted
+% \phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+% \email{xpan1@swarthmore.edu}                               % optional, remove / comment the line if not wanted
+% \homepage{shawnpan.me}                         % optional, remove / comment the line if not wanted
+% \extrainfo{}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+  
+\newcommand*{\customcventry}[7][.25em]{
+  \begin{tabular}{@{}l} 
+    {\bfseries #4}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\bfseries #5}
+  \end{tabular} \\
+  \begin{tabular}{@{}l} 
+    {\itshape #3}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #2}
+  \end{tabular}
+  \ifx&#7&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#7%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\newcommand*{\customcvproject}[4][.25em]{
+%   \vfill\noindent
+  \begin{tabular}{@{}l} 
+    {\bfseries #2}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #3}
+  \end{tabular}
+  \ifx&#4&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#4%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\setlength{\tabcolsep}{12pt}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+\vspace*{-20mm}
+
+\begin{center}
+\begin{tabular}{c c c }
+ %\faGlobe\enspace mysite.me & 
+ \faEnvelopeO\enspace pritam.ghosh2411@gmail.com & \faGithub\enspace blueRonyHazard & \faMobile\enspace (+91)790-851-3530\\  
+\end{tabular}
+\end{center}
+
+\section{EDUCATION}
+{\customcventry{Graduated: June 2019}{B.Tech in Computer Science \& Engg. GPA: 8.84/10.0}{IIT (Indian School of Mines)}{Dhanbad, India}{}{}}
+
+\section{EXPERIENCE}
+
+{\customcventry{June 2019 - Present}{Sr. Software Engineer}{Samsung R\&D Institute}{Bangalore, India}{}
+{\begin{itemize}
+  \item Developed Resource Allocation and Scheduling algorithms for the MAC layer of the network architecture.
+  \item Designed and delivered feature requirements including Uplink Coordinated Multipoint, Carrier Aggregation, Harmonic Interference Avoidance etc in a fast pased agile environment, Improvement of Downlink Throughput by 5 Mbps and Uplink Throughput by 2 Mbps.
+  \item Managed a team of engineers for the maintainance of the SATP (Stand Alone Test Framework) testing Framework on Visual Studio.
+  \item Devised a new enhancement for Subscriber Profile Identity (SPID) based Resource Utilization that improved the resource allocation by ~20\%. Received Samsung Citizen Award - 2020 for this feature.  
+  \item Resolved Critical issues on existing code and added test cases to increase the existing code coverage percentage to 85\%.
+\end{itemize}
+}}
+
+{\customcventry{May 2018 – July 2018}{Software Development Intern}{Samsung R\&D Institute}{Bangalore, India}{}
+{\begin{itemize}
+  \item Developed an algorithm to detect the eNodeB performance anomaly with the help of unsupervised learning techniques on real cellular data.
+  \item Delivered a probabilistic approach to detect aberration and also determine the erroneous eNodeB which lead to faster analysis and resolution of issues.
+  \item Achieved an accuracy of ~90\% for the algorithm and reduced the Turn around time of detecting erroneous Key Performance Indicators from 6-7 hrs to 55 mins.
+\end{itemize}
+}}
+
+\section{PROJECTS}
+
+{\customcvproject{Deterministic Primality Approach}{Jan 2019 – Apr 2019}
+{\begin{itemize}
+  \item Calculated all the prime numbers below 10$^9$, deterministically, in a polynomial time complexity using Miller Rabin Primality Test.
+\end{itemize}
+}
+
+{\customcvproject{PageRank}{July 2018 – Nov 2018}
+{\begin{itemize}
+  \item Proposed the mathematical methods of ranking web pages and compared the total probability of sites and total iterations to converge of all the methods using same inputs. 
+  \item Simulated a combination of Fuzzy and dynamic approach to get a similar working principle of classical Google PageRank algorithm.
+\end{itemize}
+}
+
+{\customcvproject{Shamir's Secret Sharing Scheme}{July 2016 - Apr 2017}
+  {\begin{itemize}
+    \item Analysed and identified the drawbacks of classical Shamir's Secret Sharing Scheme.
+    \item Synthesised an algorithm to identify cheaters from the classical secret Sharing Scheme.
+  \end{itemize}
+  }
+}
+}
+
+\section{SKILLS}
+\begin{minipage}{\maincolumnwidth}%
+	\small{
+    	\begin{itemize}
+          \item \textbf{Relevant Coursework}: Data Structures and Algorithms, Compiler Design, Wireless Networks, Mobile Communication, Databases, Computer Organisation
+          \item \textbf{Programming Languages}: C, C++, Python, R, MySQL
+		\end{itemize}}%
+\end{minipage}%
+
+\iffalse
+\section{ACHIEVEMENTS}
+\begin{minipage}{\maincolumnwidth}%
+	\small{
+    	\begin{itemize}
+          \item Awarded \textbf{Samsung Citizen Award, 2020} for the best software deliverable in Samsung R\&D Institute for developing and testing features for 4G-LTE systems. 
+    \item Winner of \textbf{Bixby Hackathon 2018} organised by \textbf{Samsung R\&D, Bangalore} at IIT-ISM Dhanbad.
+    \item Secured 14th rank in \textbf{CodeMarathon (Div 2) 2k16.}
+    \item Among the top 1\% of all the candidates in JEE Advanced – (AIR 4159) 
+    \item Qualified for \textbf{Kishore Vaigyanik Protshahan Yojana (KVPY)-2014} (both rounds) (AIR  900)
+    \item Secured \textbf{43rd} rank in \textbf{West Bengal JEE-2015}
+    \item Received \textbf{Appreciation letter} from Honourable HRD Minister Smriti Zubin Irani in AISSCE-2015.
+    \item Qualified for Round II of \textbf{ISI Aptitude Test} – 2015.
+    \item Qualified for \textbf{ISI Mathematical Talent Reward Program} (MTRP - 2014)
+    \item Qualified for Round II of \textbf{National Science Examination in Chemistry (NSEC)-2014} by IAPT.
+		\end{itemize}}%
+\end{minipage}%
+
+
+\section{POSITION OF RESPONSIBILITIES}
+\begin{minipage}{\maincolumnwidth}%
+	\small{
+    	\begin{itemize}
+    \item Member in \textbf{ArtFreaks}, the Art club of IIT-ISM Dhanbad. (2015-19)
+\item Member in  \textbf{FotoFreaks}, the photography club of  IIT-ISM Dhanbad. (2015-19)
+\item Core Member in \textbf{HackFest 2018} (Designing Team). (2017-18)
+\item Core Member in \textbf{HacKFest 2019} (Coordinator). (2018-19)
+		\end{itemize}}%
+\end{minipage}%
+\fi
+}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+%-----       letter       ---------------------------------------------------------
+
+\end{document}
+
+
+%% end of file `template.tex'.
